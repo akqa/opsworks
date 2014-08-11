@@ -1,3 +1,5 @@
+include_recipe "nrpe::default" 
+
 node[:deploy].each do |application, deploy|
 
 	template "#{deploy[:deploy_to]}/current/config/connections.js" do
