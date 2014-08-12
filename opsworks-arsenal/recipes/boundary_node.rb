@@ -14,4 +14,8 @@ node[:deploy].each do |application, deploy|
   		group "root"
 	end
 
+	execute "do" do
+		command "monit restart #{application}"
+	end
+
 end
